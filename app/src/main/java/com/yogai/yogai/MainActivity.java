@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener listener;
     private List<AuthUI.IdpConfig> providers;
-    private Button logoutButton;
+    private Button logoutButton , goToVideo;
+
 
 
 
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Paper.init(this);
         logoutButton = findViewById(R.id.logout_btn);
+        goToVideo = findViewById(R.id.gotoVideoPage);
         providers = Arrays.asList(
 
                 new AuthUI.IdpConfig.PhoneBuilder().build(),
@@ -63,6 +65,13 @@ public class MainActivity extends AppCompatActivity {
                                 Paper.book().destroy();
                             }
                         });
+            }
+        });
+        goToVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,VideoPlayerAcitivy.class);
+                startActivity(intent);
             }
         });
 
