@@ -26,44 +26,4 @@
         android:layout_margin="10dp"
         />
 
-    <EditText
-        android:id="@+id/video_input_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_below="@+id/videoView_Upload"
-        android:textColor="@color/white"
-        android:text="Name" />
-
-    <VideoView
-        android:id="@+id/videoView_Upload"
-        android:layout_width="match_parent"
-        android:layout_height="230dp" />
-
-    <TextView
-        android:id="@+id/text_showVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/video_input_name"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:text="showVideo" />
-
-    <TextView
-        android:id="@+id/text_choseVideo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_showVideo"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
-        android:text="ChoseVideo" />
-
-    <Button
-        android:id="@+id/upload_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/gotoVideoPage"
-
-        android:text="Upload" />
-</RelativeLayout>
+  </RelativeLayout>

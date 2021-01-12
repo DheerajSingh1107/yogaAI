@@ -35,7 +35,7 @@ public class ShowVideo extends AppCompatActivity {
             recyclerView.setHasFixedSize(true);
             recyclerView.setLayoutManager(new LinearLayoutManager(this)) ;
             database = FirebaseDatabase.getInstance();
-            databaseReference = database.getReference("video");
+            databaseReference = database.getReference("test");
 
 
     }

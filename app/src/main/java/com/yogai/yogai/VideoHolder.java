@@ -43,7 +43,7 @@ public class VideoHolder extends RecyclerView.ViewHolder {
             TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
             exoPlayer = (SimpleExoPlayer) ExoPlayerFactory.newSimpleInstance(application);
             Uri video = Uri.parse(videoUrl);
-            DefaultHttpDataSourceFactory dataSourceFactory = new DefaultHttpDataSourceFactory("videos");
+            DefaultHttpDataSourceFactory dataSourceFactory = new DefaultHttpDataSourceFactory("test");
             ExtractorsFactory extractorsFactory =new DefaultExtractorsFactory();
             MediaSource mediaSource = new ExtractorMediaSource(video,dataSourceFactory,extractorsFactory,null,null);
             playerView.setPlayer(exoPlayer);

@@ -8,11 +8,15 @@ import android.content.Intent;
 import android.icu.text.UnicodeSetSpanner;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.strictmode.WebViewMethodCalledOnWrongThreadViolation;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.MediaController;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.auth.IdpResponse;
@@ -37,12 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private List<AuthUI.IdpConfig> providers;
     private Button logoutButton , goToVideo;
     StorageReference storageReference;
-    MediaController mediaController;
-    ProgressBar progressBar;
-    Member member;
-    UploadTask uploadTask;
-    private Uri videoUri;
-    private static final int PICK_VIDEO=1;
+
 
 
 
@@ -56,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         Paper.init(this);
         logoutButton = findViewById(R.id.logout_btn);
         goToVideo = findViewById(R.id.gotoVideoPage);
+
         providers = Arrays.asList(
 
                 new AuthUI.IdpConfig.PhoneBuilder().build(),
@@ -89,7 +89,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+
+
+
+
+
 
 
     private void showSignInOptions() {

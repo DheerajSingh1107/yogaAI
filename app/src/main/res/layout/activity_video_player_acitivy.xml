@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
@@ -12,5 +12,60 @@
         android:id="@+id/videoViewMain"
         android:backgroundTint="@color/black"
         />
+    <EditText
+        android:id="@+id/video_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/videoViewMain"
+        android:textColor="@color/white"
+        android:text="Name" />
 
-</LinearLayout>
+    <VideoView
+        android:id="@+id/videoView_Upload"
+        android:layout_width="match_parent"
+        android:layout_height="230dp" />
+
+    <TextView
+        android:id="@+id/text_showVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/video_input_name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="showVideo"
+
+        />
+
+    <TextView
+        android:id="@+id/text_choseVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:text="ChooseVideo"
+
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_showVideo"
+
+        android:text="Upload" />
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upload_button"
+        android:visibility="invisible"
+        android:id="@+id/progress_bar"
+        />
+
+
+</RelativeLayout>
